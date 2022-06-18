@@ -39,12 +39,53 @@ body{
     height: 146px;
     margin-right: 34px;
     margin-bottom: 34px;
+    position: relative;
 }
 
 .card img{
     width: 100px;
     height: 100px;
 }
+
+.front-card{
+    transition: all 500ms linear;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.back-card {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 24;
+    left: 10;
+    transition: all 500ms linear;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.flip-back {
+   transform: rotateY(0deg);
+}
+
+.flip-front {
+   transform: rotateY(-180deg);
+}
+
+.match-back {
+    position: absolute;
+    top: 24;
+    left: 10;
+    transition: all 500ms linear;
+    transform-style: preserve-3d;
+ }
+ 
+ .match-front {
+    transition: all 500ms linear;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+ }
+
+
 
 @media (max-width: 614px){
     .cards{
