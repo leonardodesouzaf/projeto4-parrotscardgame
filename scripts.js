@@ -1,4 +1,5 @@
 let cardsnumber;
+let cards=[];
 
 function verifycardsnumber(){
     cardsnumber = prompt('Qual a quantidade de cartas que deseja jogar?');
@@ -24,10 +25,18 @@ function cardsdistribution(x){
     for(let i=0; i<x; i++){
         let card = ` 
         <div class="card">
-        <img src="/imagens/front.png" alt="">
+            <div class="front-card">
+            <img src="/imagens/front.png" alt="">
+            </div>
         </div>
         `;
-        document.querySelector(".cards").innerHTML += card;
+        cards.push(card);
     }
+    document.querySelector(".cards").innerHTML=cards.sort(comparador).join('');
 }
 
+
+
+function comparador() { 
+	return Math.random() - 0.5; 
+}
