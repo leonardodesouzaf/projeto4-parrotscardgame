@@ -23,7 +23,9 @@ body{
 
 .cards{
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -35,6 +37,8 @@ body{
     border-radius: 5px;
     width: 117px;
     height: 146px;
+    margin-right: 34px;
+    margin-bottom: 34px;
 }
 
 .card img{
