@@ -1,0 +1,56 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eef9bf;
+    height: 100vh;
+}
+
+.game-name{
+    font-size: 56px;
+    width: 540px;
+    height: 63px;
+    margin-top: 40px;
+    margin-bottom: 47px;
+    color: #75B79E;
+    font-weight: 700;
+    letter-spacing: -0.004em;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    width: 117px;
+    height: 146px;
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 614px){
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: initial;
+    }
+    .game-name{
+        width: 312px;
+        font-size: 36px;
+        text-align: center;
+    }
+}
