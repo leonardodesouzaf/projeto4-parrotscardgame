@@ -2,6 +2,7 @@ let cardsnumber;
 let cards=[];
 const gifs = [`backcard0.gif`,`backcard0.gif`,`backcard1.gif`,`backcard1.gif`,`backcard2.gif`,`backcard2.gif`,`backcard3.gif`,`backcard3.gif`,`backcard4.gif`,`backcard4.gif`,`backcard5.gif`,`backcard5.gif`,`backcard6.gif`,`backcard6.gif`];
 let matchingcard=[];
+let counter=0;
 
 
 function verifycardsnumber(){
@@ -49,6 +50,7 @@ function comparador() {
 }
 
 function flipcard(elemento){
+    counter++;
     let flippedcard=elemento.querySelector(".front-card").classList.contains("flip-front");
     if (flippedcard===false){
         elemento.querySelector(".front-card").classList.add("flip-front");
@@ -66,7 +68,6 @@ function flipcard(elemento){
         console.log(matchingcard[1]);
 
         if(matchingcard[0].innerHTML == matchingcard[1].innerHTML){
-            console.log("entrei no if")
             firstback.classList.add("match-back");
             firstfront.classList.add("match-front");
             firstback.classList.remove("back-card");
@@ -76,6 +77,21 @@ function flipcard(elemento){
             secondfront.classList.add("match-front");
             secondback.classList.remove("back-card");
             secondfront.classList.remove("front-card");
+
+            let checkfinal = document.querySelectorAll(".match-front");
+
+            console.log(checkfinal.length)
+            console.log(cardsnumber)
+
+            if(checkfinal.length===Number(cardsnumber)){
+                function finalalert(){
+                    console.log("entrei no if")
+                    alert(`Você ganhou em ${counter} jogadas!`);
+                }
+                setTimeout(finalalert,1000);
+            }
+            
+
         }else{
             function errorflip(){
                 firstfront.classList.remove("flip-front");
@@ -87,38 +103,4 @@ function flipcard(elemento){
         }
         matchingcard = [];
     }
-
-    /*if(flippedcard===true){
-
-
-        let elementopai = elemento.parentNode;
-        let matchcard = elemento.querySelector(".back-card img");
-        let matchcards = elementopai.querySelectorAll(".back-card img");
-        let matchingcardb = elementopai.querySelectorAll(".back-card");
-        let matchingcardf = elementopai.querySelectorAll(".front-card");
-        for(let i=0; i<cardsnumber; i++){
-            if(matchcard === matchcards[i]){
-                matchingcardback = matchingcardb[i];
-                matchingcardfront = matchingcardf[i];
-                elemento.querySelector(".back-card").classList.add("match-back");
-                elemento.querySelector(".front-card").classList.add("match-front");
-                matchingcardback.classList.add("match-back");
-                matchingcardfront.classList.add("match-front");
-            }else{
-                elemento.querySelector(".back-card").classList.remove("match-back");
-                elemento.querySelector(".front-card").classList.remove("match-front");
-                matchingcardback.classList.remove("match-back");
-                matchingcardfront.classList.remove("match-front");
-            }
-        }
-    }*/
-}
-
-
-
-
-
-function unflipcard(elemento){
-    elemento.querySelector(".front-card").classList.remove("flip-front");
-    elemento.querySelector(".back-card").classList.remove("flip-back");
 }
