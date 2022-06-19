@@ -26,9 +26,7 @@ function verifycardsnumber(){
 verifycardsnumber();
 
 function cardsdistribution(cardsnumber){
-    console.log(gifs);
     for(let i=0; i<cardsnumber; i++){
-        console.log(gifs[i]);
         let card = ` 
         <div class="card" onclick="flipcard(this)">
             <div class="front-card">
@@ -51,56 +49,54 @@ function comparador() {
 
 function flipcard(elemento){
     counter++;
-    let flippedcard=elemento.querySelector(".front-card").classList.contains("flip-front");
-    if (flippedcard===false){
+
+
+
+    let unflippedcard=elemento.querySelector(".front-card");
+
+    if (unflippedcard!==null){
         elemento.querySelector(".front-card").classList.add("flip-front");
         elemento.querySelector(".back-card").classList.add("flip-back");
         matchingcard.push(elemento);
-    }
 
-    if(matchingcard.length===2){
-        const firstback = matchingcard[0].querySelector(".back-card");
-        const firstfront = matchingcard[0].querySelector(".front-card");
-        const secondback = matchingcard[1].querySelector(".back-card");
-        const secondfront = matchingcard[1].querySelector(".front-card");
-        
-        console.log(matchingcard[0]);
-        console.log(matchingcard[1]);
+        if(matchingcard.length===2){
+            const firstback = matchingcard[0].querySelector(".back-card");
+            const firstfront = matchingcard[0].querySelector(".front-card");
+            const secondback = matchingcard[1].querySelector(".back-card");
+            const secondfront = matchingcard[1].querySelector(".front-card");
+    
+            if(matchingcard[0].innerHTML == matchingcard[1].innerHTML){
+                firstback.classList.add("match-back");
+                firstfront.classList.add("match-front");
+                firstback.classList.remove("back-card");
+                firstfront.classList.remove("front-card");
+    
+                secondback.classList.add("match-back");
+                secondfront.classList.add("match-front");
+                secondback.classList.remove("back-card");
+                secondfront.classList.remove("front-card");
+    
+                let checkfinal = document.querySelectorAll(".match-front");
 
-        if(matchingcard[0].innerHTML == matchingcard[1].innerHTML){
-            firstback.classList.add("match-back");
-            firstfront.classList.add("match-front");
-            firstback.classList.remove("back-card");
-            firstfront.classList.remove("front-card");
-
-            secondback.classList.add("match-back");
-            secondfront.classList.add("match-front");
-            secondback.classList.remove("back-card");
-            secondfront.classList.remove("front-card");
-
-            let checkfinal = document.querySelectorAll(".match-front");
-
-            console.log(checkfinal.length)
-            console.log(cardsnumber)
-
-            if(checkfinal.length===Number(cardsnumber)){
-                function finalalert(){
-                    console.log("entrei no if")
-                    alert(`Você ganhou em ${counter} jogadas!`);
+    
+                if(checkfinal.length===Number(cardsnumber)){
+                    function finalalert(){
+                        alert(`Você ganhou em ${counter} jogadas!`);
+                    }
+                    setTimeout(finalalert,1000);
                 }
-                setTimeout(finalalert,1000);
+                
+    
+            }else{
+                function errorflip(){
+                    firstfront.classList.remove("flip-front");
+                    firstback.classList.remove("flip-back");
+                    secondfront.classList.remove("flip-front");
+                    secondback.classList.remove("flip-back");
+                }   
+                setTimeout(errorflip,1000);
             }
-            
-
-        }else{
-            function errorflip(){
-                firstfront.classList.remove("flip-front");
-                firstback.classList.remove("flip-back");
-                secondfront.classList.remove("flip-front");
-                secondback.classList.remove("flip-back");
-            }   
-            setTimeout(errorflip,1000);
+            matchingcard = [];
         }
-        matchingcard = [];
     }
 }
