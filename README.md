@@ -12,7 +12,7 @@
 
 ###
 
-<p align="left">This project is a a themed memory game with randomness, effects and transitions, responsiveness and dancing parrots! 🦜 <br>In my fourth project in the full-stack web development course at Driven Education I've made a memory matching game, the page have one mobile layout and one desktop layout. This project contains knowledges about how to randomize the cards, how to identify the card that the user has selected and compare with the next selected card and too much more. <br>In this project I've used the following technologies: HTML, CSS, JavaScript, Git and GitHub.</p>
+<p align="left">This project is a themed memory game with randomness, effects and transitions, responsiveness and dancing parrots! 🦜 <br>In my fourth project in the full-stack web development course at Driven Education I've made a memory matching game, the page have one mobile layout and one desktop layout. This project contains knowledges about how to randomize the cards, how to identify the card that the user has selected and compare with the next selected card and too much more. <br>In this project I've used the following technologies: HTML, CSS, JavaScript, Git and GitHub.</p>
 
 ###
 
