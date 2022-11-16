@@ -12,7 +12,7 @@
 
 ###
 
-<p align="left">This project is a themed memory game with randomness, effects and transitions, responsiveness and dancing parrots! 🦜 🎶 <br>In my fourth project in the full-stack web development course at Driven Education I've made a memory matching game, the page have one mobile layout and one desktop layout. This project contains knowledges about how to randomize the cards, how to identify the card that the user has selected and compare with the next selected card and too much more. <br>In this project I've used the following technologies: HTML, CSS, JavaScript, Git and GitHub.</p>
+<p align="left">This project is a themed memory game with randomness, effects and transitions, responsiveness and dancing parrots! 🦜 🎶 <br>In my fourth project I've made a memory matching game, the page have desktop and mobile layout. This project contains knowledges about how to randomize the cards, how to identify the card that the user has selected and compare with the next selected card and too much more. <br>In this project I've used the following technologies: HTML, CSS, JavaScript and Git.</p>
 
 ###
 
@@ -22,14 +22,12 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" height="40" width="52" alt="html5 logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" height="40" width="52" alt="css3 logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="52" alt="javascript logo"  />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg" height="40" width="52" alt="vscode logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain-wordmark.svg" height="40" width="52" alt="git logo"  />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" height="40" width="52" alt="github logo"  />
 </div>
 
 ###
 
-<h2 align="left">Autor</h2>
+<h2 align="left">Author</h2>
 
 ###
 
